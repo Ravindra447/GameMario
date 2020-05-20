@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "gamemario": {
+      "hosting": {
+        "marioGame": [
+          "gamemario"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "gamemario"
+  }
+}

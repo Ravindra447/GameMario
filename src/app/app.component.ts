@@ -228,6 +228,5 @@ export class AppComponent implements OnInit {
     this.rowArray = [];
     this.colArray = [];
     this.gameOver = false;
-
   }
 }
