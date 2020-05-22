@@ -68,6 +68,7 @@ export class AppComponent implements OnInit {
     if (this.MushroomsArray.length == 0) {
       this.colArray = [];
       this.rowArray = [];
+      console.log(this.rows,this.colums)
       // this.MushroomsArray=[];
       for (let i = 0; i < this.rows; i++) {
         this.rowArray.push(i);
@@ -97,8 +98,8 @@ export class AppComponent implements OnInit {
         this.check(this.randomRow, this.randomColumn);
 
         //clear Inputs
-        this.colums = null;
-        this.rows = null;
+        // this.colums = null;
+        // this.rows = null;
       }, 1000)
     } else {
       console.log("game started");
@@ -166,7 +167,7 @@ export class AppComponent implements OnInit {
       }
     } else if (e.keyCode == '40') {
       // down arrow
-      if (this.MarioObj.col != this.rows - 1) {
+      if (this.MarioObj.row != this.rows -1) {
         this.MarioObj.row = this.MarioObj.row + 1;
         this.totalScore++;
 
@@ -202,7 +203,7 @@ export class AppComponent implements OnInit {
       var sibling = this.start.nextElementSibling;
       this.dotheneedful(sibling);
     }
-    console.log(this.MarioObj);
+    console.log(this.MarioObj,this.rows,this.colums);
     this.feedMario();
 
   }
