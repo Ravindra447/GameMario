@@ -44,20 +44,23 @@ export class AppComponent implements OnInit {
     // if (event.keyCode === KEY_CODE.RIGHT_ARROW || event.keyCode === KEY_CODE.LEFT_ARROW || event.keyCode === KEY_CODE.DOWN_ARROW ||event.keyCode === KEY_CODE.UP_ARROW ) {
     //   this.changeMario();
     // }
-    if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
-      this.checkKey(event);
+    if(!this.gameOver){
+      if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
+        this.checkKey(event);
+      }
+  
+      if (event.keyCode === KEY_CODE.LEFT_ARROW) {
+        this.checkKey(event);
+      }
+      if (event.keyCode === KEY_CODE.UP_ARROW) {
+        this.checkKey(event);
+      }
+  
+      if (event.keyCode === KEY_CODE.DOWN_ARROW) {
+        this.checkKey(event);
+      }
     }
-
-    if (event.keyCode === KEY_CODE.LEFT_ARROW) {
-      this.checkKey(event);
-    }
-    if (event.keyCode === KEY_CODE.UP_ARROW) {
-      this.checkKey(event);
-    }
-
-    if (event.keyCode === KEY_CODE.DOWN_ARROW) {
-      this.checkKey(event);
-    }
+    
   }
 
 
